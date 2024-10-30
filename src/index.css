@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-myBgColor;
+}
+
+.bg-hero {
+  background-color: rgba(135, 34, 57, 0.4);
+}
+
+.bg-wavyline {
+  background-image: url("./assets/svg/background/wavy-lines.png");
+  background-size: cover;
+  background-position: top;
+}
