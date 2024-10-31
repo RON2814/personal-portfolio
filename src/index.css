@@ -17,5 +17,5 @@ body {
 .bg-wavyline {
   background-image: url("./assets/svg/background/wavy-lines.png");
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
 }

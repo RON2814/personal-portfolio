@@ -11,6 +11,7 @@ module.exports = {
         myPrimary: "#D897AA",
         mySecondary: "#872239",
         myAccent: "#E43F65",
+        myTrueSecondary: "#300D15",
       },
       flex: {
         2: "1 1 30%",
