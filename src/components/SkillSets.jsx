@@ -5,7 +5,7 @@ import { getSvgSkillURL } from "../utils/svg-skill-util";
 const SkillSets = () => {
   const techSkills = getTechSkills();
   return (
-    <div className="bg-myTrueSecondary bg-opacity-40 text-white p-8 rounded-2xl">
+    <div className="bg-myTrueSecondary bg-opacity-40 text-white p-4 rounded-2xl">
       <h2 className="text-2xl font-bold mb-4 text-center">Technical Skills</h2>
 
       {/* Programming Language Skills */}

@@ -4,7 +4,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 const TypewriterEffect = () => {
   const [text] = useTypewriter({
     words: [
-      "Software Dev",
+      "Software Developer",
       "Graphic Designer",
       "Web Developer",
       "Full-Stack Dev",
@@ -14,7 +14,7 @@ const TypewriterEffect = () => {
   });
 
   return (
-    <h1 className="text-2xl md:text-4xl mb-6 py-2 font-bold">
+    <h1 className="text-2xl md:text-3xl mb-6 py-2 font-bold">
       I'm a <span className="text-myPrimary">{text}</span>
       <span>
         <Cursor cursorStyle="|" cursorColor="#D897AA" />

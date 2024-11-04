@@ -7,7 +7,16 @@ html {
 }
 
 body {
-  @apply bg-myBgColor;
+  @apply bg-myBgColor font-montserrat text-white;
+}
+
+.button {
+  @apply text-myBgColor px-8 py-2 bg-myPrimary hover:bg-myPrimaryHover font-semibold rounded-md;
+  /* text-black px-8 py-2 my-2 bg-myPrimary font-semibold rounded-md */
+}
+
+.input-field {
+  @apply p-2 my-2 rounded-md bg-transparent border-[3px] border-gray-500 hover:border-gray-100 focus:border-myPrimary text-pink-50;
 }
 
 .bg-hero {
@@ -16,6 +25,7 @@ body {
 
 .bg-wavyline {
   background-image: url("./assets/svg/background/wavy-lines.png");
-  background-size: cover;
+  background-size: auto;
+  /* background-repeat: no-repeat; */
   background-position: bottom;
 }

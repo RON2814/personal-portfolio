@@ -5,7 +5,8 @@ import { Link } from "react-scroll";
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
-  // const [visible, setVisible] = useState(true);
+
+  const tabs = ["home", "about", "project", "contact"];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,29 +25,11 @@ const NavBar = () => {
     });
   };
 
-  /*
-  ** it detect when page is scroll
   useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setVisible(currentScrollY <= lastScrollY); // Hide on scroll down
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  */
-
-  useEffect(() => {
-    const sections = document.querySelectorAll("section"); // Adjust if your sections are different
+    const sections = document.querySelectorAll("section");
 
     const observer = new IntersectionObserver(handleSectionChange, {
-      threshold: 0.6, // Trigger when 60% of the section is visible
+      threshold: 0.6,
     });
 
     sections.forEach((section) => {
@@ -61,14 +44,6 @@ const NavBar = () => {
   }, []);
 
   return (
-    /*
-    ** old header
-    <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full"
-      }`}
-    >
-    */
     <header className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b-2 border-myAccent border-opacity-30">
       <nav className="bg-myBgColor p-4 md:px-10">
         <div className="flex items-center justify-between">
@@ -77,147 +52,60 @@ const NavBar = () => {
             smooth={true}
             duration={300}
             offset={-56}
-            className="text-white font-bold"
+            className="text-white font-bold text-lg"
+            onClick={() => handleTabClick("home")}
           >
             Aaron
           </Link>
 
           <ul className="hidden md:flex space-x-4">
-            <li>
-              <Link
-                to="home"
-                smooth={true}
-                duration={300}
-                offset={-56}
-                className={`${
-                  activeTab === "home"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
-                } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("home")}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="about"
-                smooth={true}
-                duration={300}
-                offset={-56}
-                className={`${
-                  activeTab === "about"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
-                } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("about")}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="project"
-                smooth={true}
-                duration={300}
-                offset={-56}
-                className={`${
-                  activeTab === "project"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
-                } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("project")}
-              >
-                Project
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={300}
-                offset={-56}
-                className={`${
-                  activeTab === "contact"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
-                } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("contact")}
-              >
-                Contact
-              </Link>
-            </li>
+            {tabs.map((tab) => (
+              <li key={tab}>
+                <Link
+                  to={tab}
+                  smooth={true}
+                  duration={300}
+                  offset={-70}
+                  className={`${
+                    activeTab === tab
+                      ? "text-myPrimary font-bold"
+                      : "text-white"
+                  } hover:text-myPrimary hover:font-bold`}
+                  onClick={() => handleTabClick(tab)}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <button onClick={toggleMenu} className="md:hidden">
             <FaBars className="fa-solid text-white text-2xl" />
           </button>
         </div>
-        {isMenuOpen ? (
-          <ul className="flex-col items-center md:hidden">
-            <li className="py-2 mt-3">
+
+        <ul
+          className={`flex-col text-center md:hidden transition-all duration-500 ease-in-out ${
+            isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          } overflow-hidden`}
+        >
+          {tabs.map((tab) => (
+            <li className="py-2 mt-3" key={tab}>
               <Link
-                to="home"
+                to={tab}
                 smooth={true}
                 duration={300}
-                offset={-56}
+                offset={-70}
                 className={`${
-                  activeTab === "contact"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
+                  activeTab === tab ? "text-myPrimary font-bold" : "text-white"
                 } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("home")}
+                onClick={() => handleTabClick(tab)}
               >
-                Home
+                {tab.charAt(0).toUpperCase() + tab.slice(1)}
               </Link>
             </li>
-            <li className="py-2">
-              <Link
-                to="about"
-                smooth={true}
-                duration={300}
-                offset={-56}
-                className={`${
-                  activeTab === "contact"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
-                } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("about")}
-              >
-                About
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link
-                to="project"
-                smooth={true}
-                duration={300}
-                offset={-56}
-                className={`${
-                  activeTab === "contact"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
-                } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("project")}
-              >
-                Project
-              </Link>
-            </li>
-            <li className="py-2">
-              <Link
-                to="contact"
-                className={`${
-                  activeTab === "contact"
-                    ? "text-myPrimary font-bold"
-                    : "text-white"
-                } hover:text-myPrimary hover:font-bold`}
-                onClick={() => handleTabClick("contact")}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        ) : null}
+          ))}
+        </ul>
       </nav>
     </header>
   );

@@ -3,7 +3,10 @@ import SkillSets from "./SkillSets";
 
 const About = () => {
   return (
-    <section id="about" className="h-auto text-white my-10 md:my-5 bg-wavyline">
+    <section
+      id="about"
+      className="font-montserrat h-auto my-14 md:my-5 bg-wavyline"
+    >
       <div className="px-4 md:px-32 flex flex-col md:flex-row items-start">
         {/* Left Side: Text Content */}
         <div className="md:w-1/2">
@@ -13,7 +16,7 @@ const About = () => {
                 ABOUT ME
               </span>
             </h1>
-            <div className="mt-4 text-left text-[1.05rem] text-center">
+            <div className="mt-4 md:text-left text-[1.05rem] text-center">
               <p>
                 I am a 3rd-year BS Computer Science student at Cavite State
                 University - Bacoor Campus, driven to become a skilled Software
@@ -23,11 +26,11 @@ const About = () => {
             </div>
           </div>
 
-          <div className="md:hidden md:w-1/2 mt-8 md:mt-0">
+          <div className="md:hidden md:w-1/2 mt-4">
             <SkillSets />
           </div>
 
-          <div className="my-8">
+          <div className="my-8 text-center md:text-start">
             <h2 className="font-semibold text-lg mb-2">Passionate About</h2>
             <p className="text-[1.05rem]">
               Developing scalable and user-friendly web apps, creating seamless
@@ -36,16 +39,16 @@ const About = () => {
             </p>
           </div>
 
-          <div className="my-8">
+          <div className="my-8 text-center md:text-start">
             <h2 className="font-semibold text-lg mb-2">Career Aspirations</h2>
             <p className="text-[1.05rem]">
-              I aim to become a proficient Software Developer/Engineer,
+              My goal is to become a proficient Software Developer/Engineer,
               committed to continuous learning, skill enhancement, and
               delivering efficient, reliable, and innovative software solutions.
             </p>
           </div>
 
-          <div className="my-8">
+          <div className="my-8 text-center md:text-start">
             <h2 className="font-semibold text-lg mb-2">Core Strengths</h2>
             <p className="text-[1.05rem]">
               Problem-solving and analytical thinking, effective teamwork and
@@ -55,14 +58,14 @@ const About = () => {
           </div>
 
           <div className="text-center mt-8">
-            <h3 className="font-semibold">
+            <h3 className="font-semibold text-lg">
               Let's connect and explore opportunities!
             </h3>
           </div>
         </div>
 
         {/* Right Side: SkillSets */}
-        <div className="hidden md:block md:w-1/2 mt-8 md:mt-0">
+        <div className="hidden md:block md:w-1/2 md:mt-4 md:ml-8">
           <SkillSets />
         </div>
       </div>

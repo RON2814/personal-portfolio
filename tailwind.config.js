@@ -9,6 +9,7 @@ module.exports = {
       colors: {
         myBgColor: "#11090B",
         myPrimary: "#D897AA",
+        myPrimaryHover: "#d8829c",
         mySecondary: "#872239",
         myAccent: "#E43F65",
         myTrueSecondary: "#300D15",
