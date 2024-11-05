@@ -9,7 +9,7 @@ const data = [
   { file: "django.svg", name: "Django", category: "backend" },
   { file: "express-js.svg", name: "Express.js", category: "backend" },
   { file: "figma.svg", name: "Figma", category: "others" },
-  { file: "flutter.svg", name: "Flutter", category: "fronted" },
+  { file: "flutter.svg", name: "Flutter", category: "frontend" },
   { file: "java.svg", name: "Java", category: "language" },
   { file: "laravel.svg", name: "Laravel", category: "backend" },
   { file: "mongodb.svg", name: "MongoDB", category: "backend" },

@@ -3,19 +3,16 @@ import SkillSets from "./SkillSets";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="font-montserrat h-auto my-14 md:my-5 bg-wavyline"
-    >
-      <div className="px-4 md:px-32 flex flex-col md:flex-row items-start">
+    <section id="about" className="font-montserrat my-14 md:my-5 bg-wavyline">
+      <div className="px-4 md:px-10 lg:px-32 flex flex-col md:flex-row items-start">
         {/* Left Side: Text Content */}
         <div className="md:w-1/2">
           <div className="flex flex-col items-center md:items-start">
-            <h1 className="text-myPrimary text-3xl mb-4">
+            <h2 className="text-myPrimary text-3xl mb-4">
               <span className="border-b-2 border-myAccent font-semibold">
                 ABOUT ME
               </span>
-            </h1>
+            </h2>
             <div className="mt-4 md:text-left text-[1.05rem] text-center">
               <p>
                 I am a 3rd-year BS Computer Science student at Cavite State

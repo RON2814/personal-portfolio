@@ -16,7 +16,7 @@ body {
 }
 
 .input-field {
-  @apply p-2 my-2 rounded-md bg-transparent border-[3px] border-gray-500 hover:border-gray-100 focus:border-myPrimary text-pink-50;
+  @apply text-pink-50 p-2 rounded-md bg-transparent border-2 border-gray-500 hover:border-gray-100 focus:border-myPrimary outline-none;
 }
 
 .bg-hero {
@@ -28,4 +28,24 @@ body {
   background-size: auto;
   /* background-repeat: no-repeat; */
   background-position: bottom;
+}
+
+/* Custom styles for Swiper pagination */
+.swiper-pagination-bullet {
+  @apply bg-myPrimary;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-myPrimary;
+}
+
+/* Custom styles for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-myPrimaryHover;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  @apply text-myPrimary;
 }

@@ -11,4 +11,4 @@ const socialLinks = [
   },
 ];
 
-export { socialLinks };
+export default socialLinks;
