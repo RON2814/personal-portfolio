@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slides from "../../data/slides";
+import slides from "../../data/projects";
+import getProjectImage from "../../utils/image-project-util";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -46,12 +47,16 @@ const Carousel = ({ activeIndex, onSlideChange }) => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="flex flex-col items-center">
             <div
-              className="bg-gray-300 flex items-center justify-center p-10 cursor-pointer"
+              className="bg-myBgColor bg-opacity-60 flex items-center justify-center p-2 h-[25vh] w-full cursor-pointer"
               onClick={() => handleSlideClick(index)}
             >
-              <p className="text-lg font-bold">{slide.text}</p>
+              <img
+                src={getProjectImage(slide.image)}
+                alt={slide.name}
+                className="h-[25vh] w-auto object-contain"
+              />
             </div>
-            <p className="mt-2 opacity-0">{slide.text}</p>
+            <p className="mt-2 opacity-0">.</p>
           </SwiperSlide>
         ))}
       </Swiper>

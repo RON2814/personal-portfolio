@@ -32,4 +32,4 @@ const getTechSkills = () => {
   return skillsData;
 };
 
-export { getTechSkills };
+export default getTechSkills;

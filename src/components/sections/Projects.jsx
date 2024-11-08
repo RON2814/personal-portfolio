@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Carousel from "../project/Carousel";
 import projects from "../../data/projects";
+import getProjectVideoURL from "../../utils/video-project-util";
+import ReactPlayer from "react-player";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,11 +19,17 @@ const Projects = () => {
           <div className="mb-8">
             {projects[activeIndex] && (
               <>
-                <div className="h-[10rem] bg-slate-500">
-                  <img src="" alt="project" />
-                </div>
-                <h3>{projects[activeIndex].name}</h3>
-                <p>{projects[activeIndex].description}</p>
+                <ReactPlayer
+                  url={getProjectVideoURL(projects[activeIndex].video)}
+                  playing
+                  loop
+                  muted
+                  width="100%"
+                />
+                <h3 className="font-medium my-4">
+                  {projects[activeIndex].name}
+                </h3>
+                <p className="my-2">{projects[activeIndex].description}</p>
                 {/* Other content */}
               </>
             )}

@@ -1,7 +1,7 @@
 import React from "react";
 import TypewriterEffect from "../hero/TypewriterEffect";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
-import photo from "../assets/images/photo.png";
+import myPhoto from "../../assets/images/photo.png";
 import { Link } from "react-scroll";
 
 const Hero = () => {
@@ -51,7 +51,7 @@ const Hero = () => {
               className="flex flex-2 items-center justify-center md:relative"
             >
               <img
-                src={photo}
+                src={myPhoto}
                 alt="John Aaron Apayong"
                 className="h-[13rem] md:h-max md:max-w-full md:max-h-full object-contain md:absolute bottom-0 right-10"
               />
