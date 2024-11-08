@@ -1,10 +1,9 @@
 import React from "react";
-import NavBar from "../components/NavBar";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Projects from "../components/Projects";
-import Contact from "../components/Contact";
-import Footer from "../components/Footer";
+import NavBar from "../components/sections/NavBar";
+import Hero from "../components/sections/Hero";
+import About from "../components/sections/About";
+import Projects from "../components/sections/Projects";
+import Contact from "../components/sections/Contact";
 
 const PortfolioPage = () => {
   return (

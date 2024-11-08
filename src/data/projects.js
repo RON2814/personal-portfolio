@@ -1,8 +1,9 @@
 const projects = [
   {
     link: "https://example.com/project1",
-    name: "Project 1",
-    description: "Description for Project 1",
+    name: "CGOHISOU Inventory Tracker - Mobile application",
+    description:
+      "A mobile application that helps the user to track the inventory of the CGOHISOU. using Flutter, Express.js, and MongoDB.",
   },
   {
     link: "https://example.com/project2",

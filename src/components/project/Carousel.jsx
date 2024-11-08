@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import slides from "../data/slides";
+import slides from "../../data/slides";
 
 import "swiper/css";
 import "swiper/css/pagination";

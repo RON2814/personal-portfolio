@@ -1,8 +1,7 @@
 import React from "react";
-import TypewriterEffect from "./TypewriterEffect";
+import TypewriterEffect from "../hero/TypewriterEffect";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
-import photo from "../assets/img/photo.png";
-import background from "../assets/svg/background/blurry-gradient-bg.svg";
+import photo from "../assets/images/photo.png";
 import { Link } from "react-scroll";
 
 const Hero = () => {

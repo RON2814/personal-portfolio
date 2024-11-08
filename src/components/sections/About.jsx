@@ -1,5 +1,5 @@
 import React from "react";
-import SkillSets from "./SkillSets";
+import SkillSets from "../about/SkillSets";
 
 const About = () => {
   return (

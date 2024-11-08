@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Carousel from "./Carousel";
-import projects from "../data/projects";
+import Carousel from "../project/Carousel";
+import projects from "../../data/projects";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);

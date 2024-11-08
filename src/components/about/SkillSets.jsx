@@ -1,6 +1,6 @@
 import React from "react";
-import { getTechSkills } from "../data/technicalSkills";
-import { getSvgSkillURL } from "../utils/svg-skill-util";
+import { getTechSkills } from "../../data/technicalSkills";
+import { getSvgSkillURL } from "../../utils/svg-skill-util";
 
 const SkillSets = () => {
   const techSkills = getTechSkills();

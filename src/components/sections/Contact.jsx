@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
-import TextareaWithCounter from "./TextareaWithCounter";
+import TextareaWithCounter from "../form/TextareaWithCounter";
 import emailjs from "@emailjs/browser";
 import { IoIosSend } from "react-icons/io";
-import socialLinks from "../data/socialLinks";
+import socialLinks from "../../data/socialLinks";
 
 const Contact = () => {
   const form = useRef();

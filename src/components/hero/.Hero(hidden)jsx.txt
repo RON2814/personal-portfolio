@@ -1,6 +1,6 @@
 import React from "react";
 import photo from "../assets/img/photo.png";
-import TypewriterEffect from "./TypewriterEffect";
+import TypewriterEffect from "../TypewriterEffect";
 import { FaArrowRight } from "react-icons/fa";
 
 const Hero = () => {
