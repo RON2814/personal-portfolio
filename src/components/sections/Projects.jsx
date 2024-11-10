@@ -3,6 +3,7 @@ import Carousel from "../project/Carousel";
 import projects from "../../data/projects";
 import getProjectVideoURL from "../../utils/video-project-util";
 import ReactPlayer from "react-player";
+import getSvgSkillURL from "../../utils/svg-skill-util";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -15,8 +16,8 @@ const Projects = () => {
             PROJECTS
           </span>
         </h2>
-        <div className="bg-myTrueSecondary px-4 py-8 rounded-md text-center">
-          <div className="mb-8">
+        <div className="bg-myTrueSecondary px-4 py-8 rounded-md text-center lg:relative lg:text-left">
+          <div className="mb-8 project-lg">
             {projects[activeIndex] && (
               <>
                 <ReactPlayer
@@ -25,36 +26,63 @@ const Projects = () => {
                   loop
                   muted
                   width="100%"
+                  className="lg:absolute lg:top-1/2 lg:-translate-y-1/2 lg:left-0 z-0"
+                  style={{ objectFit: "cover" }}
                 />
-                <h3 className="font-medium my-4">
-                  {projects[activeIndex].name}
-                </h3>
-                <p className="my-2">{projects[activeIndex].description}</p>
-                {/* Other content */}
               </>
             )}
-            <h4>Tools used:</h4>
-            <div>{/* tools */}</div>
-            <div className="flex flex-col">
-              <a
-                href={projects[activeIndex].link}
-                className="button my-2"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Project
-              </a>
-              <a
-                href={projects[activeIndex].link}
-                className="button"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                View Code
-              </a>
+            <div className="h-full transition duration-300 lg:hover:backdrop-blur-lg ">
+              <div className="lg:absolute lg:bottom-1/2 lg:translate-y-1/2 lg:left-10">
+                <div className="lg:relative lg:z-10 lg:w-[40vw] transition duration-300 lg:hover:backdrop-blur-lg">
+                  {projects[activeIndex] && (
+                    <>
+                      <h3 className="text-2xl font-medium my-4">
+                        {projects[activeIndex].name}
+                      </h3>
+                      <p className="my-2">
+                        {projects[activeIndex].description}
+                      </p>
+                    </>
+                  )}
+                  <h4 className="text-white mt-4">Tools Used:</h4>
+                  <div className="flex my-2 justify-center lg:justify-start">
+                    {projects[activeIndex] &&
+                      projects[activeIndex].tools.map((tool, index) => (
+                        <div key={index} className="relative group">
+                          <img
+                            src={getSvgSkillURL(tool.file)}
+                            alt={tool.name}
+                            className="w-8 h-8 mx-2 lg:mx-0 lg:mr-4 bg-white rounded-md p-1 cursor-pointer"
+                          />
+                          {/* Tooltip */}
+                          <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-2 py-1 bg-mySecondary text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                            {tool.name}
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                  <div className="flex flex-col lg:flex-row lg:justify-center my-4">
+                    <a
+                      href={getProjectVideoURL(projects[activeIndex].video)}
+                      className="button my-2 lg:my-0 lg:mx-4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Project
+                    </a>
+                    <a
+                      href={projects[activeIndex].link}
+                      className="button"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Code
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <h3>Projects</h3>
           <Carousel activeIndex={activeIndex} onSlideChange={setActiveIndex} />
           {/* Pass props */}
           {/* <div className="mt-4">

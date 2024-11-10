@@ -49,3 +49,7 @@ body {
 .swiper-button-prev:hover {
   @apply text-myPrimary;
 }
+
+.project-lg {
+  @apply lg:bg-myBgColor lg:p-4 lg:h-[70vh] lg:relative;
+}

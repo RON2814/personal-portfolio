@@ -29,7 +29,9 @@ const Hero = () => {
               <TypewriterEffect />
               <div className="md:flex">
                 <a
-                  href="#about"
+                  href="/resume-cv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center button mb-2 md:m-2"
                 >
                   <FaDownload className="mr-2 mb-[.18rem] text-[.9rem]" />{" "}

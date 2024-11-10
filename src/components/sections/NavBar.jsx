@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
+import logo from "../../assets/svg/logo/logo.svg";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,7 +59,7 @@ const NavBar = () => {
             className="text-white font-bold text-lg cursor-pointer"
             onClick={() => handleTabClick("home")}
           >
-            Aaron
+            <img src={logo} alt="Aaron" className="h-[5vh]" />
           </Link>
 
           <ul className="hidden md:flex space-x-4">
