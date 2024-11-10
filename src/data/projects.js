@@ -12,15 +12,15 @@ const projects = [
       { name: "MongoDB", file: "mongodb.svg" },
     ],
   },
-  {
-    link: "https://example.com/project2",
-    name: "Example Project 2",
-    description:
-      "This is not a real project just showing the next project card.",
-    image: "",
-    video: "",
-    tools: [],
-  },
+  // {
+  //   link: "https://example.com/project2",
+  //   name: "Example Project 2",
+  //   description:
+  //     "This is not a real project just showing the next project card.",
+  //   image: "",
+  //   video: "",
+  //   tools: [],
+  // },
 ];
 
 export default projects;
