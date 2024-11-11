@@ -49,6 +49,9 @@ const Projects = () => {
                         <img
                           src={getSvgSkillURL(tool.file)}
                           alt={tool.name}
+                          width="32"
+                          height="32"
+                          loading="lazy"
                           className="w-8 h-8 mx-2 lg:mx-0 lg:mr-4 bg-white rounded-md p-1 cursor-pointer"
                         />
                         {/* Tooltip */}

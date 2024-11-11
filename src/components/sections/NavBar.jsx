@@ -59,7 +59,13 @@ const NavBar = () => {
             className="text-white font-bold text-lg cursor-pointer"
             onClick={() => handleTabClick("home")}
           >
-            <img src={logo} alt="Aaron" className="h-[5vh]" />
+            <img
+              src={logo}
+              alt="John Aaron Logo"
+              width="50"
+              height="50"
+              className="h-[5vh] w-auto"
+            />
           </Link>
 
           <ul className="hidden md:flex space-x-4">

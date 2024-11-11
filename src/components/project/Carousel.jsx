@@ -53,6 +53,9 @@ const Carousel = ({ activeIndex, onSlideChange }) => {
               <img
                 src={getProjectImage(slide.image)}
                 alt={slide.name}
+                width="200"
+                height="150"
+                loading="lazy"
                 className="h-[25vh] w-auto object-contain"
               />
             </div>
