@@ -19,7 +19,7 @@ const Contact = () => {
       })
       .catch((error) => {
         console.error("Email sending failed:", error);
-        alert("Failed to send email. Please try again later.");
+        alert("Failed to send email. Please try again.");
       });
   };
 
@@ -70,8 +70,9 @@ const Contact = () => {
             <div className="text-center md:text-start my-8">
               <h1 className="text-2xl">Get in Touch</h1>
               <p className="my-2">
-                I would love to hear from you! Feel free to reach out through my
-                contact form or social media channels
+                I would love to hear from you! If you have suggestion or
+                feedback feel free to reach out through my contact form or
+                social media channels
               </p>
               <p>+63 976 319 9300</p>
               <a
