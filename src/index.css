@@ -24,7 +24,7 @@ body {
 }
 
 .bg-wavyline {
-  background-image: url("./assets/webp/background/wavy-lines.webp");
+  background-image: url("./assets/images/background/wavy-lines.webp");
   background-size: auto;
   /* background-repeat: no-repeat; */
   background-position: bottom;
