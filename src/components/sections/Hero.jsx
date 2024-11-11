@@ -1,7 +1,7 @@
 import React from "react";
 import TypewriterEffect from "../hero/TypewriterEffect";
 import { FaArrowRight, FaDownload } from "react-icons/fa";
-import myPhoto from "../../assets/images/photo.png";
+import myPhoto from "../../assets/images/photo.webp";
 import { Link } from "react-scroll";
 
 const Hero = () => {

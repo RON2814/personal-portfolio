@@ -4,7 +4,7 @@ const projects = [
     name: "CGOHISOU Inventory Tracker - Mobile application",
     description:
       "A mobile application that helps the user to track the inventory of the CGOHISOU. using Flutter, Express.js, and MongoDB.",
-    image: "project1.png",
+    image: "project1.webp",
     video: "project1.mp4",
     tools: [
       { name: "Flutter", file: "flutter.svg" },
