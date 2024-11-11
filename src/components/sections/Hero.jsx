@@ -56,7 +56,6 @@ const Hero = () => {
                 src={myPhoto}
                 height="200"
                 width="200"
-                loading="lazy"
                 alt="John Aaron Apayong"
                 className="w-full max-w-[13rem] md:h-max md:max-w-full md:max-h-full object-contain md:absolute bottom-0 right-10"
               />
