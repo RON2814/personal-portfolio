@@ -43,6 +43,7 @@ const Hero = () => {
                   duration={300}
                   offset={-70}
                   className="flex items-center button md:m-2"
+                  href="#about"
                 >
                   View my work <FaArrowRight className="ml-2 text-[.9rem]" />
                 </Link>

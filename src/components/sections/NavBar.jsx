@@ -73,7 +73,6 @@ const NavBar = () => {
             {tabs.map((tab) => (
               <li key={tab}>
                 <Link
-                  href={`#${tab}`}
                   to={tab}
                   smooth={true}
                   duration={300}
@@ -85,6 +84,7 @@ const NavBar = () => {
                   } hover:text-myPrimary hover:font-bold`}
                   onClick={() => handleTabClick(tab)}
                   aria-current={activeTab === tab ? "page" : undefined}
+                  href={`#${tab}`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </Link>
@@ -115,7 +115,6 @@ const NavBar = () => {
             {tabs.map((tab) => (
               <li className="py-2 mt-3" key={tab}>
                 <Link
-                  href={`#${tab}`}
                   to={tab}
                   smooth={true}
                   duration={300}
@@ -126,6 +125,8 @@ const NavBar = () => {
                       : "text-white"
                   } hover:text-myPrimary hover:font-bold cursor-pointer`}
                   onClick={() => handleTabClick(tab)}
+                  aria-current={activeTab === tab ? "page" : undefined}
+                  href={`#${tab}`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </Link>
