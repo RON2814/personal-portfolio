@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import TextareaWithCounter from "../form/TextareaWithCounter";
 import emailjs from "@emailjs/browser";
 import { IoIosSend } from "react-icons/io";
@@ -9,13 +9,21 @@ const Contact = () => {
   const publicKey = "c6lpaqCkPTWZBs4BH";
   const serviceId = "service_n50s9tg";
   const templatesId = "template_v749usg";
+
+  const [formKey, setFormKey] = useState(0);
+  const [isSending, setIsSending] = useState(false);
+
   const sendEmail = (e) => {
     e.preventDefault();
+    setIsSending(true);
 
     emailjs
       .sendForm(serviceId, templatesId, form.current, publicKey)
       .then(() => {
         alert("Email sent successfully!");
+        form.current.reset();
+        setFormKey((prevKey) => prevKey + 1);
+        setIsSending(false);
       })
       .catch((error) => {
         console.error("Email sending failed:", error);
@@ -57,11 +65,20 @@ const Contact = () => {
                 placeholder="Enter your subject (Optional)"
                 className="flex w-full input-field my-2"
               />
-              <TextareaWithCounter className="my-2" />
-              <button type="submit" className="flex w-full button my-2">
+              <TextareaWithCounter
+                key={formKey}
+                className="my-2"
+                name={"message"}
+                id={"message"}
+              />
+              <button
+                type="submit"
+                className="flex w-full button my-2"
+                disabled={isSending}
+              >
                 <span className="flex mx-auto">
                   <IoIosSend className="text-[1.8rem] mr-1 pb-1" />
-                  Send message
+                  {isSending ? "Sending..." : "Send Message"}
                 </span>
               </button>
             </form>

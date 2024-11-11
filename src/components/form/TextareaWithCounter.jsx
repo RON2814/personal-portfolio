@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const TextareaWithCounter = () => {
+const TextareaWithCounter = ({ name, id }) => {
   const [message, setMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const maxLength = 255;
@@ -13,8 +13,8 @@ const TextareaWithCounter = () => {
   return (
     <div className="relative">
       <textarea
-        name="message"
-        id="message"
+        name={name}
+        id={id}
         placeholder="Enter a message"
         className="flex w-full input-field resize-none"
         value={message}

@@ -52,6 +52,7 @@ const NavBar = () => {
       >
         <div className="flex items-center justify-between">
           <Link
+            href="#home"
             to="home"
             smooth={true}
             duration={300}
@@ -72,6 +73,7 @@ const NavBar = () => {
             {tabs.map((tab) => (
               <li key={tab}>
                 <Link
+                  href={`#${tab}`}
                   to={tab}
                   smooth={true}
                   duration={300}
@@ -113,6 +115,7 @@ const NavBar = () => {
             {tabs.map((tab) => (
               <li className="py-2 mt-3" key={tab}>
                 <Link
+                  href={`#${tab}`}
                   to={tab}
                   smooth={true}
                   duration={300}

@@ -30,18 +30,18 @@ const About = () => {
           <div className="my-8 text-center md:text-start">
             <h2 className="font-semibold text-lg mb-2">Passionate About</h2>
             <p className="text-[1.05rem]">
-              Developing scalable and user-friendly web apps, creating seamless
-              mobile experiences with Flutter, and collaborating with teams to
-              deliver high-quality solutions.
+              Developing website application, creating a mobile application with
+              Flutter, and collaborating with teams to deliver high-quality
+              solutions.
             </p>
           </div>
 
           <div className="my-8 text-center md:text-start">
             <h2 className="font-semibold text-lg mb-2">Career Aspirations</h2>
             <p className="text-[1.05rem]">
-              My goal is to become a proficient Software Developer/Engineer,
+              My goal is to become a proficient Software Developer/Engineer and
               committed to continuous learning, skill enhancement, and
-              delivering efficient, reliable, and innovative software solutions.
+              delivering efficient, and reliable software solutions.
             </p>
           </div>
 
