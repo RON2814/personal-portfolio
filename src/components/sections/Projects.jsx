@@ -4,6 +4,8 @@ import projects from "../../data/projects";
 import getProjectVideoURL from "../../utils/video-project-util";
 import ReactPlayer from "react-player";
 import getSvgSkillURL from "../../utils/svg-skill-util";
+import { MdLaunch } from "react-icons/md";
+import { FaGithub } from "react-icons/fa";
 
 const Projects = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -64,18 +66,20 @@ const Projects = () => {
                 <div className="flex flex-col lg:flex-row lg:justify-center my-4">
                   <a
                     href={getProjectVideoURL(projects[activeIndex].video)}
-                    className="button my-2 lg:my-0 lg:mx-4"
+                    className="flex button my-2 lg:my-0 lg:mx-4"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    <MdLaunch className="my-auto mr-2 text-2xl" />
                     View Project
                   </a>
                   <a
                     href={projects[activeIndex].link}
-                    className="button"
+                    className="flex button"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
+                    <FaGithub className="my-auto mr-2 text-2xl" />
                     View Code
                   </a>
                 </div>
