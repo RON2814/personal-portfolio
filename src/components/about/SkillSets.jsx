@@ -23,6 +23,9 @@ const SkillSets = () => {
                 <img
                   src={getSvgSkillURL(skill.file)}
                   alt={skill.name}
+                  width="32"
+                  height="32"
+                  loading="lazy"
                   className="bg-white rounded-lg p-1 h-auto w-[2rem] max-w-[100%] object-contain"
                 />
               </div>
@@ -74,6 +77,9 @@ const SkillSets = () => {
                 <img
                   src={getSvgSkillURL(skill.file)}
                   alt={skill.name}
+                  width="32"
+                  height="32"
+                  loading="lazy"
                   className="bg-white rounded-lg p-1 h-auto w-[2rem] max-w-[100%] object-contain"
                 />
               </div>
@@ -98,6 +104,9 @@ const SkillSets = () => {
                 <img
                   src={getSvgSkillURL(skill.file)}
                   alt={skill.name}
+                  width="32"
+                  height="32"
+                  loading="lazy"
                   className="bg-white rounded-lg p-1 h-auto w-[2rem] max-w-[100%] object-contain"
                 />
               </div>
