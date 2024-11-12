@@ -109,7 +109,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Visit my ${link.icon.displayName} profile`}
-                    className="text-2xl text-gray-400 hover:text-myPrimary transition-colors duration-300"
+                    className="text-2xl text-gray-400 hover:text-lightPrimary dark:hover:text-myPrimary transition-colors duration-300"
                   >
                     <link.icon />
                   </a>
