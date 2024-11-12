@@ -1,12 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
-import logo from "../../assets/svg/logo/logo.svg";
+import logoLight from "../../assets/svg/logo/logo-light.svg";
+import logoDark from "../../assets/svg/logo/logo-dark.svg";
 import ThemeToggle from "../navbar/ThemeToggle";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("home");
+
+  // **Lifted Dark Mode State**
+  const [darkMode, setDarkMode] = useState(() => {
+    // Check localStorage for user preference
+    const savedMode = localStorage.getItem("theme");
+    if (savedMode) {
+      return savedMode === "dark";
+    }
+    // If no preference, use system preference
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  });
 
   const tabs = ["home", "about", "project", "contact"];
 
@@ -45,6 +57,18 @@ const NavBar = () => {
     };
   }, []);
 
+  // **Effect to Handle Dark Mode Classes and Persistence**
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (darkMode) {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
+  }, [darkMode]);
+
   return (
     <header className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b-2 bg-lightAccent dark:border-myAccent border-opacity-30">
       <nav
@@ -58,15 +82,15 @@ const NavBar = () => {
             smooth={true}
             duration={300}
             offset={-56}
-            className="text-myBgColor bg-lightBgColor rounded-md p-1 dark:p-0 dark:bg-transparent dark:text-lightPrimary font-bold text-lg cursor-pointer"
+            className="rounded-md dark:text-lightPrimary font-bold text-lg cursor-pointer"
             onClick={() => handleTabClick("home")}
           >
             <img
-              src={logo}
+              src={darkMode ? logoDark : logoLight} // **Updated to Use State**
               alt="John Aaron Portfolio Logo"
               width="50"
               height="50"
-              className="h-[5vh] w-auto"
+              className="h-[5vh] w-auto text-myBgColor dark:text-lightPrimary"
             />
           </Link>
 
@@ -92,7 +116,7 @@ const NavBar = () => {
               </li>
             ))}
             <li>
-              <ThemeToggle />
+              <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
             </li>
           </ul>
 
@@ -137,7 +161,7 @@ const NavBar = () => {
               </li>
             ))}
             <li className="py-2 mt-3 flex w-full justify-center">
-              <ThemeToggle />
+              <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
             </li>
           </ul>
         </div>
