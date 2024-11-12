@@ -15,7 +15,8 @@ const TypewriterEffect = () => {
 
   return (
     <h1 className="text-2xl md:text-3xl mb-6 py-2 font-bold">
-      I'm a <span className="text-myPrimary">{text}</span>
+      I'm a{" "}
+      <span className="text-lightPrimary dark:text-myPrimary">{text}</span>
       <span>
         <Cursor cursorStyle="|" cursorColor="#D897AA" />
       </span>

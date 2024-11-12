@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
 import logo from "../../assets/svg/logo/logo.svg";
+import ThemeToggle from "../navbar/ThemeToggle";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,9 +46,9 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b-2 border-myAccent border-opacity-30">
+    <header className="fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b-2 bg-lightAccent dark:border-myAccent border-opacity-30">
       <nav
-        className="bg-myBgColor p-4 md:px-10 lg:px-32"
+        className="bg-lightBgColor dark:bg-myBgColor p-4 md:px-10 lg:px-32"
         aria-label="Main Navigation"
       >
         <div className="flex items-center justify-between">
@@ -57,7 +58,7 @@ const NavBar = () => {
             smooth={true}
             duration={300}
             offset={-56}
-            className="text-white font-bold text-lg cursor-pointer"
+            className="text-myBgColor bg-lightPrimary rounded-md dark:bg-transparent dark:text-lightPrimary font-bold text-lg cursor-pointer"
             onClick={() => handleTabClick("home")}
           >
             <img
@@ -79,8 +80,8 @@ const NavBar = () => {
                   offset={-70}
                   className={`${
                     activeTab === tab
-                      ? "text-myPrimary font-bold"
-                      : "text-white"
+                      ? "text-lightPrimary dark:text-myPrimary font-bold"
+                      : "text-black dark:text-white"
                   } hover:text-myPrimary hover:font-bold`}
                   onClick={() => handleTabClick(tab)}
                   aria-current={activeTab === tab ? "page" : undefined}
@@ -90,6 +91,9 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <ThemeToggle />
+            </li>
           </ul>
 
           <button
@@ -99,7 +103,7 @@ const NavBar = () => {
             className="md:hidden"
             aria-label="Toggle navigation menu"
           >
-            <FaBars className="fa-solid text-white text-2xl" />
+            <FaBars className="fa-solid text-black dark:text-white text-2xl" />
           </button>
         </div>
 
@@ -121,8 +125,8 @@ const NavBar = () => {
                   offset={-70}
                   className={`${
                     activeTab === tab
-                      ? "text-myPrimary font-bold"
-                      : "text-white"
+                      ? "text-lightPrimary dark:text-myPrimary font-bold"
+                      : "text-black dark:text-white"
                   } hover:text-myPrimary hover:font-bold cursor-pointer`}
                   onClick={() => handleTabClick(tab)}
                   aria-current={activeTab === tab ? "page" : undefined}
@@ -132,6 +136,9 @@ const NavBar = () => {
                 </Link>
               </li>
             ))}
+            <li className="py-2 mt-3 flex w-full justify-center">
+              <ThemeToggle />
+            </li>
           </ul>
         </div>
       </nav>

@@ -24,7 +24,9 @@ const Hero = () => {
             >
               <h1 className="text-3xl md:text-4xl font-bold mb-4 py-2">
                 Hello! I'm{" "}
-                <span className="text-myPrimary">John Aaron Apayong</span>
+                <span className="text-lightPrimary dark:text-myPrimary">
+                  John Aaron Apayong
+                </span>
               </h1>
               <TypewriterEffect />
               <div className="md:flex">

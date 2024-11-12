@@ -47,7 +47,7 @@ const Carousel = ({ activeIndex, onSlideChange }) => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="flex flex-col items-center">
             <div
-              className="bg-myBgColor bg-opacity-60 flex items-center justify-center p-2 h-[25vh] w-full cursor-pointer"
+              className="bg-lightBgColor dark:bg-myBgColor bg-opacity-60 flex items-center justify-center p-2 h-[25vh] w-full cursor-pointer"
               onClick={() => handleSlideClick(index)}
             >
               <img

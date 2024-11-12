@@ -8,8 +8,8 @@ const About = () => {
         {/* Left Side: Text Content */}
         <div className="md:w-1/2">
           <div className="flex flex-col items-center md:items-start">
-            <h2 className="text-myPrimary text-3xl mb-4">
-              <span className="border-b-2 border-myAccent font-semibold">
+            <h2 className="text-lightPrimary dark:text-myPrimary text-3xl mb-4">
+              <span className="border-b-2 border-lightAccent dark:border-myAccent font-semibold">
                 ABOUT ME
               </span>
             </h2>

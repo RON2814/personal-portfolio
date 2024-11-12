@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import TextareaWithCounter from "../form/TextareaWithCounter";
 import emailjs from "@emailjs/browser";
 import { IoIosSend } from "react-icons/io";
-import socialLinks from "../../data/socialLinks";
+import socialLinks from "../../data/SocialLinks";
 
 const Contact = () => {
   const form = useRef();
@@ -34,8 +34,8 @@ const Contact = () => {
   return (
     <section id="contact" className="my-12 p-4 md:px-10 lg:px-32">
       <div className="">
-        <h2 className="text-myPrimary text-3xl mb-4 text-center md:text-start">
-          <span className="border-b-2 border-myAccent font-semibold">
+        <h2 className="text-lightPrimary dark:text-myPrimary text-3xl mb-4 text-center md:text-start">
+          <span className="border-b-2 border-lightAccent dark:border-myAccent font-semibold">
             CONTACT ME
           </span>
         </h2>

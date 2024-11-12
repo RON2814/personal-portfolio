@@ -7,20 +7,19 @@ html {
 }
 
 body {
-  @apply bg-myBgColor font-montserrat text-white;
+  @apply bg-lightBgColor font-montserrat text-myBgColor dark:bg-myBgColor dark:text-lightBgColor;
 }
 
 .button {
-  @apply text-myBgColor px-8 py-2 bg-myPrimary hover:bg-myPrimaryHover font-semibold rounded-md;
-  /* text-black px-8 py-2 my-2 bg-myPrimary font-semibold rounded-md */
+  @apply text-lightBgColor px-8 py-2 bg-lightPrimary hover:bg-lightPrimaryHover font-semibold rounded-md dark:text-myBgColor dark:bg-myPrimary dark:hover:bg-myPrimaryHover;
 }
 
 .input-field {
-  @apply text-pink-50 p-2 rounded-md bg-transparent border-2 border-gray-500 hover:border-gray-100 focus:border-myPrimary outline-none;
+  @apply dark:text-lightBgColor p-2 rounded-md bg-transparent border-2 border-gray-300 hover:border-gray-400 focus:border-lightPrimary dark:focus:border-myPrimary outline-none;
 }
 
 .bg-hero {
-  background-color: rgba(135, 34, 57, 0.4);
+  @apply bg-lightSecondary dark:bg-mySecondary bg-opacity-40;
 }
 
 .bg-wavyline {
@@ -32,24 +31,24 @@ body {
 
 /* Custom styles for Swiper pagination */
 .swiper-pagination-bullet {
-  @apply bg-myPrimary;
+  @apply bg-lightPrimary dark:bg-myPrimary;
 }
 
 .swiper-pagination-bullet-active {
-  @apply bg-myPrimary;
+  @apply bg-lightPrimary dark:bg-myPrimary;
 }
 
 /* Custom styles for Swiper navigation buttons */
 .swiper-button-next,
 .swiper-button-prev {
-  @apply text-myPrimaryHover;
+  @apply text-lightPrimaryHover dark:text-myPrimaryHover;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  @apply text-myPrimary;
+  @apply text-lightPrimary dark:text-myPrimary;
 }
 
 .project-lg {
-  @apply lg:bg-myBgColor lg:p-4 lg:h-[70vh] lg:relative;
+  @apply lg:bg-lightBgColor lg:p-4 lg:h-[70vh] lg:relative dark:lg:bg-myBgColor;
 }
