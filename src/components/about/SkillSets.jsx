@@ -5,7 +5,7 @@ import getSvgSkillURL from "../../utils/svg-skill-util";
 const SkillSets = () => {
   const techSkills = getTechSkills();
   return (
-    <div className="bg-myTrueSecondary bg-opacity-40 text-white p-4 rounded-2xl">
+    <div className="bg-lightTrueSecondary dark:bg-myTrueSecondary bg-opacity-40 p-4 rounded-2xl">
       <h2 className="text-2xl font-bold mb-4 text-center">Technical Skills</h2>
 
       {/* Programming Language Skills */}
@@ -17,7 +17,7 @@ const SkillSets = () => {
           {techSkills.language.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center bg-myPrimary rounded-lg text-black font-medium"
+              className="flex items-center bg-lightPrimary dark:bg-myPrimary rounded-lg text-lightBgColor dark:text-myBgColor font-medium"
             >
               <div className="p-2 bg-mySecondary bg-opacity-[.25] rounded-l">
                 <img
@@ -41,7 +41,7 @@ const SkillSets = () => {
           {techSkills.frontEnd.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center bg-myPrimary rounded-lg text-black font-medium"
+              className="flex items-center bg-lightPrimary dark:bg-myPrimary rounded-lg text-lightBgColor dark:text-myBgColor font-medium"
             >
               <div className="p-2 bg-mySecondary bg-opacity-[.25] rounded-l">
                 <img
@@ -68,7 +68,7 @@ const SkillSets = () => {
           {techSkills.backEnd.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center bg-myPrimary rounded-lg text-black font-medium"
+              className="flex items-center bg-lightPrimary dark:bg-myPrimary rounded-lg text-lightBgColor dark:text-myBgColor font-medium"
             >
               <div className="p-2 bg-mySecondary bg-opacity-[.25] rounded-l">
                 <img
@@ -92,7 +92,7 @@ const SkillSets = () => {
           {techSkills.others.map((skill) => (
             <div
               key={skill.name}
-              className="flex items-center bg-myPrimary rounded-lg text-black font-medium"
+              className="flex items-center bg-lightPrimary dark:bg-myPrimary rounded-lg text-lightBgColor dark:text-myBgColor font-medium"
             >
               <div className="p-2 bg-mySecondary bg-opacity-[.25] rounded-l">
                 <img
