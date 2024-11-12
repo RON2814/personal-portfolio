@@ -62,7 +62,7 @@ const NavBar = () => {
           >
             <img
               src={logo}
-              alt="John Aaron Logo"
+              alt="John Aaron Portfolio Logo"
               width="50"
               height="50"
               className="h-[5vh] w-auto"
