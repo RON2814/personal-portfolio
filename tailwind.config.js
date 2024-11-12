@@ -18,7 +18,7 @@ module.exports = {
 
         // Lightmode
         lightBgColor: "#f6eef0",
-        lightPrimary: "#bc4d6e",
+        lightPrimary: "#af4464",
         lightPrimaryHover: "#993553",
         lightSecondary: "#dd7890",
         lightAccent: "#c01b42",
