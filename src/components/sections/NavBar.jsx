@@ -58,7 +58,7 @@ const NavBar = () => {
             smooth={true}
             duration={300}
             offset={-56}
-            className="text-myBgColor bg-lightPrimary rounded-md dark:bg-transparent dark:text-lightPrimary font-bold text-lg cursor-pointer"
+            className="text-myBgColor bg-lightBgColor rounded-md p-1 dark:p-0 dark:bg-transparent dark:text-lightPrimary font-bold text-lg cursor-pointer"
             onClick={() => handleTabClick("home")}
           >
             <img
