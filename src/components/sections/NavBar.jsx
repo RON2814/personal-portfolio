@@ -82,7 +82,7 @@ const NavBar = () => {
             smooth={true}
             duration={300}
             offset={-56}
-            className="rounded-md dark:text-lightPrimary font-bold text-lg cursor-pointer"
+            className="rounded-md font-bold text-lg cursor-pointer"
             onClick={() => handleTabClick("home")}
           >
             <img
@@ -90,7 +90,7 @@ const NavBar = () => {
               alt="John Aaron Portfolio Logo"
               width="50"
               height="50"
-              className="h-[5vh] w-auto text-myBgColor dark:text-lightPrimary"
+              className="h-[5vh] w-auto"
             />
           </Link>
 
